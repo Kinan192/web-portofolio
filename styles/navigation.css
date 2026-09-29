@@ -1,0 +1,23 @@
+.showcase-nav { position: fixed; z-index: 30; top: 16px; left: 0; right: 0; padding: 0 16px; display: flex; justify-content: center; pointer-events: none; }
+.showcase-nav nav { pointer-events: auto; display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 620px; height: 60px; gap: 12px; padding: 7px 9px 7px 18px; border: 1px solid rgba(226,233,238,.9); border-radius: 999px; background: rgba(255,255,255,.9); box-shadow: 0 10px 32px rgba(20,45,64,.12); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); font-family: 'Space Grotesk', sans-serif; transition: max-width .85s cubic-bezier(.22,1,.36,1), box-shadow .85s ease; }
+.showcase-nav.is-expanded nav { max-width: 880px; box-shadow: 0 12px 36px rgba(20,45,64,.15); }
+.showcase-brand { font-size: 15px; font-weight: 700; white-space: nowrap; margin-right: 9px; }
+.showcase-links { display: flex; align-items: center; gap: 2px; flex-grow: 0; transition: flex-grow .85s cubic-bezier(.22,1,.36,1), margin .85s cubic-bezier(.22,1,.36,1); }
+.showcase-links a { font-size: 14px; font-weight: 600; padding: 10px 14px; border-radius: 999px; white-space: nowrap; transition: padding .85s cubic-bezier(.22,1,.36,1), background-color .2s, color .2s; }
+.showcase-links a:hover { background: rgba(233,242,252,.65); }
+.showcase-links a[aria-current=location] { background: var(--pale); color: var(--blue); }
+.showcase-nav.is-expanded .showcase-links { flex-grow: 1; justify-content: space-evenly; margin-inline: 12px; }
+.showcase-contact { display: inline-flex; align-items: center; min-height: 42px; padding: 0 17px; border-radius: 999px; background: #1454ae; color: #fff; font-size: 13px; font-weight: 700; white-space: nowrap; }
+.showcase-contact:hover { background: #0d448f; }
+.showcase-contact span { margin-left: 6px; }
+@media (max-width: 700px) {
+  .showcase-nav { top: 12px; padding: 0 10px; }
+  .showcase-nav nav { max-width: 310px; height: 52px; gap: 0; padding: 5px 7px; }
+  .showcase-nav.is-expanded nav { max-width: 100%; }
+  .showcase-brand, .showcase-contact { display: none; }
+  .showcase-links { gap: 1px; }
+  .showcase-links a { font-size: 13px; padding: 10px 11px; }
+  .showcase-nav.is-expanded .showcase-links { width: 100%; justify-content: space-between; gap: 0; margin: 0; }
+}
+@media (max-width: 370px) { .showcase-links a { font-size: 12px; padding-inline: 9px; } }
+@media (prefers-reduced-motion: reduce) { .showcase-nav nav, .showcase-links, .showcase-links a { transition: none; } }

@@ -1,0 +1,22 @@
+.about-section { padding: 0 0 180px; }
+.about-grid { display: grid; grid-template-columns: 1.15fr .8fr; gap: 38px; align-items: start; }
+.about-left { display: grid; gap: 30px; }
+.bio, .skills, .credentials { padding: 36px; }
+.bio h3 { max-width: 370px; font-size: 21px; line-height: 1.3; letter-spacing: -.03em; margin-bottom: 26px; }
+.bio p { color: var(--muted); font-size: 14px; line-height: 1.75; margin: 0; }
+.skills .overline { margin-bottom: 24px; }
+.skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+.skills-grid > div { padding: 12px; border-radius: 13px; background: var(--pale); }
+.skills-grid strong, .skills-grid small { display: block; }
+.skills-grid strong { font-size: 11px; }
+.skills-grid small { color: var(--muted); font-size: 9px; margin-top: 3px; }
+.credential-head { display: flex; justify-content: space-between; color: var(--blue); }
+.credentials .overline { margin-bottom: 22px; }
+.credential { padding: 15px 17px; margin-top: 12px; border-radius: 14px; background: var(--bg); }
+.credential > div { display: flex; justify-content: space-between; gap: 12px; }
+.credential strong { font-size: 12px; }
+.credential span, .credential small { color: var(--muted); font-size: 10px; }
+.credential small { display: block; margin: 8px 0; }
+.credential a { color: var(--blue); font-size: 10px; font-weight: 600; }
+@media (max-width: 900px) { .about-grid { gap: 20px; } }
+@media (max-width: 700px) { .about-section { padding-bottom: 90px; } .about-grid { grid-template-columns: 1fr; } .bio, .skills, .credentials { padding: 25px; } .skills-grid { grid-template-columns: repeat(2,1fr); } }

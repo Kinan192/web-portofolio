@@ -1,0 +1,8 @@
+footer { background: #fff; border-top: 1px solid var(--border); }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 95px; font-size: 11px; }
+.footer-inner > div:first-child { display: flex; align-items: center; gap: 18px; }
+.footer-inner span { color: var(--muted); }
+.footer-icons { display: flex; gap: 7px; }
+.footer-icons a { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--border); border-radius: 50%; }
+@media (max-width: 700px) { .footer-inner, .footer-inner > div:first-child { flex-wrap: wrap; gap: 8px; } .footer-inner { padding: 20px 0; } }
+.footer-icons svg { width: 16px; height: 16px; }
