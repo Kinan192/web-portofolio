@@ -4,7 +4,7 @@ import { site } from '../../data/site'
 
 const links = [
   ['home', 'Home'],
-  ['projects', 'Projects'],
+  ['projects', 'Work Gallery'],
   ['about', 'About'],
   ['contact', 'Contact'],
 ] as const
@@ -43,7 +43,7 @@ export default function DynamicIsland() {
             <a key={id} href={`#${id}`} onClick={() => setActive(id)} aria-current={active === id ? 'location' : undefined}>{label}</a>
           ))}
         </div>
-        <a className="showcase-contact" href="#contact" onClick={() => setActive('contact')} aria-label="Get in touch: lihat bagian kontak">Get in touch <span aria-hidden="true">↘</span></a>
+        <a className="showcase-contact" href="#contact" onClick={() => setActive('contact')} aria-label="Hire Me: lihat bagian kontak">Hire Me <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
   )
