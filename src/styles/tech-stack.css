@@ -1,0 +1,22 @@
+.tech-stack--rail { position: absolute; z-index: 3; top: 112px; bottom: 55px; left: max(8px,calc(50% - 700px)); width: 56px; overflow: hidden; mask-image: linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent); }
+.tech-stack--rail .tech-track, .tech-stack--rail .tech-group { display: flex; flex-direction: column; align-items: center; width: 56px; }
+.tech-stack--rail .tech-item { display: grid; place-items: center; flex: none; width: 56px; height: 70px; filter: grayscale(1); opacity: .67; transition: filter .25s, opacity .25s; }
+.tech-stack--rail .tech-item:hover { filter: grayscale(0); opacity: 1; }
+.tech-stack--rail .tech-item img { width: 31px; height: 31px; object-fit: contain; }
+.tech-stack--rail .tech-item span { display: none; }
+.tech-tooltip { position: absolute; z-index: 8; pointer-events: none; transform: translateY(-50%); padding: 8px 12px; border: 1px solid #dce9f4; border-radius: 10px; background: rgba(255,255,255,.96); box-shadow: 0 8px 22px rgba(20,45,64,.12); color: var(--blue); font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; white-space: nowrap; }
+@media (min-width: 761px) and (max-width: 1400px) {
+  .tech-stack--rail { left: 2px; width: 32px; }
+  .tech-stack--rail .tech-track, .tech-stack--rail .tech-group, .tech-stack--rail .tech-item { width: 32px; }
+  .tech-stack--rail .tech-item img { width: 25px; height: 25px; }
+}
+@media (max-width: 760px) {
+  .tech-stack--rail { position: relative; z-index: 2; top: auto; bottom: auto; left: auto; order: 2; width: 100%; height: 100px; margin: 24px 0 0; display: flex; mask-image: linear-gradient(to right,transparent,#000 9%,#000 91%,transparent); }
+  .tech-stack--rail .tech-track, .tech-stack--rail .tech-group { flex-direction: row; align-items: center; width: max-content; }
+  .tech-stack--rail .tech-item { display: flex; align-items: center; gap: 9px; width: auto; height: auto; padding: 0 20px; color: #777; font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; white-space: nowrap; }
+  .tech-stack--rail .tech-item img { width: 25px; height: 25px; }
+  .tech-stack--rail .tech-item span { display: inline; }
+  .tech-tooltip { transform: translateY(-100%); }
+}
+.tech-stack--rail .tech-item { opacity: .75; }
+.tech-tooltip { border-color: var(--border); background: #22262c; box-shadow: 0 10px 28px rgba(0,0,0,.28); color: #f1f2f3; }
